@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>Interior Design</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" id="bootstrap-css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+  <script>
+      baguetteBox.run('.tz-gallery');
+  </script>
+  <script>
+      setTimeout(function(){
+          $('.loader_bg').fadeToggle();
+      }, 2000);
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function () {
+      //you can set this, as long as it's not greater than the slides length
+      var show = 3;
+      var w = $('#slider_02').width() / show;
+      var l = $('.slide_02').length;
+      
+      $('.slide_02').width(w);
+      $('#slide-container').width(w * l)
+      
+      function slider() {
+          $('.slide_02:first-child').animate({
+              marginLeft: -w
+          }, 'slow', function () {
+              $(this).appendTo($(this).parent()).css({marginLeft: 20});
+          });
+      }
+      var timer = setInterval(slider, 1500);
+      
+      $('#slider_02').hover(function(){
+          clearInterval(timer);
+      },function(){
+          timer = setInterval(slider, 1500);
+      });
+  });
+  </script>
+    
+</head>
+<body>
+  <!-- loader start -->
+    <div class="loader_bg">
+        <div class="loader">
+        </div>
+    </div>
+    <!-- loader end -->
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  BLOG
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="blog.html">BLOG</a>
+                  <a class="dropdown-item" href="blog.html">BLOG DETAILS</a>
+                  <a class="dropdown-item" href="blog.html">ELEMENTS</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html">
+                <button type="button" class="btn btn-outline-danger">CONTACT US</button></a>
+              </li>
+              
+          </ul>
+        </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+      <!-- slider start -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="images/slider.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="animated bounceInLeft" style="animation-delay: 2s"><i>Welcome to Interior</i></h5>
+                <img class="animated bounceInLeft" style="animation-delay: 2s" src="images/hero_line.png" alt=""/>
+                <p class="animated bounceInLeft" style="animation-delay: 3s">Modern Interior<br>& Design</p>
+                <a id="play-video" class="video-play-button" href="#">
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/section_bg04.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5 class="animated bounceInLeft" style="animation-delay: 2s"><i>Welcome to Interior</i></h5>
+                  <img class="animated bounceInLeft" style="animation-delay: 2s" src="images/hero_line.png" alt=""/>
+                  <p class="animated bounceInLeft" style="animation-delay: 3s">Modern Interior<br>& Design</p>
+                  <a id="play-video" class="video-play-button" href="#">
+                    <span></span>
+                  </a>
+                </div>
+              </div>
+        </div>
+      </div>
+      <!-- slider end -->
+      <!-- services clean start -->
+      <div class="services-clean">
+      <div class="container">
+        <div class="row">
+          <div class="col-md list_cleaning">
+            <h5>Clean and Services</h5>
+            <p><i>each project we establish relationships with partners who we know will help us.</i></p>
+          </div>
+          <div class="col-md list_cleaning">
+            <h5>Clean and Modern</h5>
+            <p><i>For each project we establish relationships with partners who we know will help us.</i></p>
+          </div>
+          <div class="col-md list_cleaning">
+            <h5>Clean and Design</h5>
+            <p><i>For each project we establish relationships with partners who we know will help us.</i></p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- services clean end -->
+      <!-- section_04 start -->
+      <div class="section_04">
+        <div class="section_04_inner">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 section-title">
+                <span>Our Professional Services</span>
+                <h2>We Will Create Modern And First Class Intorior.</h2>
+                <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            </div>
+            <div class="col-lg-4 discover-btn-section">
+              <a href="about.html">
+              <button type="button" class=" discover-btn" >discover more about us</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- section_04 end -->
+    <!--? Services Ara Start -->
+    <div class="services-area section-padding3">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="cl-xl-7 col-lg-8 col-md-10">
+                  <!-- Section Tittle -->
+                  <div class="section-tittle text-center mb-70">
+                      <span>Our Professional Services</span>
+                      <h2>Best Interior Services</h2>
+                  </div> 
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="our-services">
+      <div class="container">
+          <div class="card">
+            <div class="imgbox">
+              <img src="images/services1.png" alt="Lighting">
+            </div>
+            <div class="content">
+              <h2>Lighting</h2>
+              <p>For each project we establish relationships with partners who we know will help us.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgbox">
+              <img src="images/services2.png" alt="Interior Design">
+            </div>
+            <div class="content">
+              <h2>Interior Design</h2>
+              <p>For each project we establish relationships with partners who we know will help us.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="imgbox">
+              <img src="images/services3.png" alt="Office Decoration">
+            </div>
+            <div class="content">
+              <h2>Office Decoration</h2>
+              <p>For each project we establish relationships with partners who we know will help us.</p>
+            </div>
+          </div>
+          </div>
+    </div>
+  <!-- Services Ara End -->
+  <!-- gallery start -->
+  <div class="container-fluid p-0 fix gallery-container">
+    <h1>Our Interior & Design Gallery</h1>
+    <div class="tz-gallery">
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-4 col-md-6">
+                <a class="lightbox" href="#">
+                    <img src="images/gallery1.png" alt="Park">
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a class="lightbox" href="#">
+                    <img src="images/gallery2.png" alt="Bridge">
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a class="lightbox" href="#">
+                    <img src="images/gallery3.png" alt="Tunnel">
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a class="lightbox" href="#">
+                    <img src="images/gallery4.png" alt="Coast">
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <a class="lightbox" href="#">
+                    <img src="images/gallery5.png" alt="Rails">
+                </a>
+            </div>
+            <div class="col-xl-6 col-lg-4 col-md-6">
+                <a class="lightbox" href="#">
+                    <img src="images/gallery6.png" alt="Traffic">
+                </a>
+            </div>
+            
+        </div>
+
+    </div>
+
+</div>
+<!-- gallery end -->
+<!-- Team area start -->
+<section class="team-area">
+  <div class="container">
+    <h3 class="section-heading">CREATIVE DIRECTOR</h3>
+    <h1 class="section-heading-inner">Best Interitor Services</h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="team-single">
+          <div class="content-area">
+            <div class="side-one">
+              <div class="card1">
+                <div class="card-body text-center">
+                  <div class="img-area">
+                    <img src="images/team1.jpg" alt="">
+                  </div>
+                    <h4 style="margin-top: 20px;">John Sunsa</h4>
+                    <p>Creative Director</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="side-two">
+              <div class="card1">
+                <div class="card-body text-center mt-4">
+                  <h4>John Sunsa</h4>
+                  <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     <ul class="list-inline">
+                       <li class="list-inline-item">
+                         <a href="#" class="social-icon" target="_blank">
+                           <i class="fa fa-youtube"></i>
+                         </a>
+                       </li>
+                       <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-instagram"></i>
+                        </a>
+                      </li>
+                     </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="team-single">
+          <div class="content-area">
+            <div class="side-one">
+              <div class="card1">
+                <div class="card-body text-center">
+                  <div class="img-area">
+                    <img src="images/team2.jpg" alt="">
+                  </div>
+                    <h4 style="margin-top: 20px;">Syed Aashir</h4>
+                    <p>Assistant Director</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="side-two">
+              <div class="card1">
+                <div class="card-body text-center mt-4">
+                  <h4>Syed Aashir</h4>
+                  <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     <ul class="list-inline">
+                       <li class="list-inline-item">
+                         <a href="#" class="social-icon" target="_blank">
+                           <i class="fa fa-youtube"></i>
+                         </a>
+                       </li>
+                       <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-instagram"></i>
+                        </a>
+                      </li>
+                     </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="team-single">
+          <div class="content-area">
+            <div class="side-one">
+              <div class="card1">
+                <div class="card-body text-center">
+                  <div class="img-area">
+                    <img src="images/team3.jpg" alt="">
+                  </div>
+                    <h4 style="margin-top: 20px;">David Warner</h4>
+                    <p>General Manager</p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="side-two">
+              <div class="card1">
+                <div class="card-body text-center mt-4">
+                  <h4>David Warner</h4>
+                  <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                     <ul class="list-inline">
+                       <li class="list-inline-item">
+                         <a href="#" class="social-icon" target="_blank">
+                           <i class="fa fa-youtube"></i>
+                         </a>
+                       </li>
+                       <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="#" class="social-icon" target="_blank">
+                          <i class="fa fa-instagram"></i>
+                        </a>
+                      </li>
+                     </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- Team area end -->
+<!-- testimonial start -->
+<div class="testimonials">
+  <div class="container-fluid p-0 fix">
+    <div id="slider">
+      <input type="radio" name="slider" id="slide1" checked>
+      <input type="radio" name="slider" id="slide2" >
+      <input type="radio" name="slider" id="slide3" >
+      <input type="radio" name="slider" id="slide4" >
+      <div id="slides">
+        <div id="overflow">
+          <div class="inner">
+            <div class="slide slide_1">
+              <div class="slide-content">
+                <div class="img-area">
+                  <img src="images/testi-logo.png" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation <br> ullamco laboris nisi ut aliquip</p>
+                  <span><strong style="color: #fff;">Christine Eve</strong>   -   Co Founder</span>
+
+              </div>
+            </div>
+            <div class="slide slide_2">
+              <div class="slide-content">
+                 <div class="img-area">
+                  <img src="images/testi-logo.png" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                  sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation <br> ullamco laboris nisi ut aliquip</p>
+                  <span><strong style="color: #fff;">Christine Eve</strong>   -   Co Founder</span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="controls">
+          <label for="slide1"></label>
+        <label for="slide2"></label>
+      </div>
+      <div id="bullets">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- testimonial end -->
+<!-- brand area start -->
+<div class="brand-area">
+  <div class="container-fluid p-0 fix">
+    <div id="slider_02">
+      <div id="slide-container">
+          <div class="slide_02">
+            <img src="images/brand1.png" alt="">
+          </div>
+          <div class="slide_02">
+            <img src="images/brand2.png" alt="">
+          </div>
+          <div class="slide_02">
+            <img src="images/brand3.png" alt="">
+          </div>
+          <div class="slide_02">
+            <img src="images/brand4.png" alt="">
+          </div>
+          <div class="slide_02">
+            <img src="images/brand5.png" alt="">
+          </div>
+      </div>
+    </div>
+    </div>
+</div>
+<!-- brand area end -->
+<!-- want to work start -->
+<div class="jumbotron">
+  <h1 class="display-4">Want To Work Here!</h1>
+  <p class="lead">Are you Searching For a First-Class Consultant?</p>
+  <hr class="my-4" style="border-color: #fff !important;">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="work-button" href="contact.html" role="button">contact us</a>
+</div>
+<!-- want to work end -->
+<!-- recent news start -->
+<div class="news-area">
+  <div class="container">
+    <br> <br> <br> <br> <br> <br> <br> <br>
+    <h3 class="news-heading">OUR LATEST BLOG</h3>
+    <h1 class="news-heading-inner">Our Recent News</h1>
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-inner">
+        <img src="images/home_blog1.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">16 Easy Ideas to Use Everyday Stuff in Kitchen.</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, pariatur. Deleniti illo corporis dolor incidunt quaerat excepturi dolores laborum id maiores? Laborum non distinctio ex.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+        <img src="images/home_blog2.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">16 Easy Ideas to Use Everyday Stuff in Kitchen.</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repellat suscipit placeat facilis soluta corporis excepturi assumenda asperiores, atque tenetur necessitatibus beatae, facere ullam officia!</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- recent news end -->
+<!-- footer start -->
+<div class="services-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="footer-logo">
+          <img src="images/logo2_footer.png"alt="">
+        </div>
+        <p class="first-para">Grabbing the concsumer’s attention <br> isn’t enough you have to keep that <br> attention for at least a.</p>
+        <h3 class="second-para">+564 <strong>7885 3222</strong></h3>
+        <p>syedaashir120@gmail.com</p>
+      </div>
+      <div class="col-md">
+        <h5>USEFUL LINKS</h5>
+        <p class="first-para"><strong>New York</strong></p>
+        <p>123 East 26th Street, Fifth Floor, <br> New York, NY 10011</p>
+        <p class="second-para"><strong>Japan</strong></p>
+        <p>123 East 26th Street, Fifth Floor, <br> New York, NY 10011</p>
+      </div>
+      <div class="col-md">
+       <h5>INSTAGRAM FEED</h5>
+       <div class="first-para">
+         <img src="images/instagram1.png" alt="">
+         <img style="margin-left: 6px;" src="images/instagram2.png" alt="">
+         <img style="margin-left: 6px;" src="images/instagram3.png" alt="">
+       </div>
+       <div class="second-para">
+         <img src="images/instagram4.png" alt="">
+         <img style="margin-left: 6px;" src="images/instagram5.png" alt="">
+         <img style="margin-left: 6px;" src="images/instagram6.png" alt="">
+       </div>
+      </div>
+    </div>
+    <br> <br> <br>
+    <hr class="my-4" style="border-color: lightblue !important;">
+    <div class="row">
+    <div class="col-md-8">
+      <div class="copyright">
+        <p>Copyright ©2020 All rights reserved | This template is made with <i class="fa fa-heart" style="color: red;" aria-hidden="true"></i> by <strong>Syed Aashir</strong>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="footer-fa-right">
+      <p><span>Follow Us</span> 
+            <a href="#" class="social-icon" target="_blank">
+              <i class="fa fa-youtube"></i>
+            </a>
+           <a href="#" class="social-icon" target="_blank">
+             <i class="fa fa-facebook"></i>
+           </a>
+           <a href="#" class="social-icon" target="_blank">
+             <i class="fa fa-linkedin"></i>
+           </a>
+           <a href="#" class="social-icon" target="_blank">
+             <i class="fa fa-instagram"></i>
+           </a>
+      </p>
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  <!-- footer end -->
+</body>
+</html>

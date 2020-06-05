@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>Interior Design</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" id="bootstrap-css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+      setTimeout(function(){
+          $('.loader_bg').fadeToggle();
+      }, 2000);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+          //you can set this, as long as it's not greater than the slides length
+          var show = 3;
+          var w = $('#slider_02').width() / show;
+          var l = $('.slide_02').length;
+          
+          $('.slide_02').width(w);
+          $('#slide-container').width(w * l)
+          
+          function slider() {
+              $('.slide_02:first-child').animate({
+                  marginLeft: -w
+              }, 'slow', function () {
+                  $(this).appendTo($(this).parent()).css({marginLeft: 20});
+              });
+          }
+          var timer = setInterval(slider, 1500);
+          
+          $('#slider_02').hover(function(){
+              clearInterval(timer);
+          },function(){
+              timer = setInterval(slider, 1500);
+          });
+      });
+      </script>
+</head>
+<body>
+  <!-- loader start -->
+    <div class="loader_bg">
+        <div class="loader">
+        </div>
+    </div>
+    <!-- loader end -->
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  BLOG
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="blog.html">BLOG</a>
+                  <a class="dropdown-item" href="blog.html">BLOG DETAILS</a>
+                  <a class="dropdown-item" href="blog.html">ELEMENTS</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                  <a href="contact.html">
+                <button type="button" class="btn btn-outline-danger">CONTACT US</button></a>
+              </li>
+              
+          </ul>
+        </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
+      <!-- slider start -->
+      <div class="slider-area2">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-12">
+                      <div class="hero-cap hero-cap2 text-center pt-80">
+                          <h2 class="animated bounceInLeft" style="animation-delay: 2s">Our Services</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- slider end -->
+      <!-- services clean start -->
+      <div class="services-clean">
+        <div class="container">
+          <div class="row">
+            <div class="col-md list_cleaning">
+              <h5>Clean and Services</h5>
+              <p><i>each project we establish relationships with partners who we know will help us.</i></p>
+            </div>
+            <div class="col-md list_cleaning">
+              <h5>Clean and Modern</h5>
+              <p><i>For each project we establish relationships with partners who we know will help us.</i></p>
+            </div>
+            <div class="col-md list_cleaning">
+              <h5>Clean and Design</h5>
+              <p><i>For each project we establish relationships with partners who we know will help us.</i></p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- services clean end -->
+            <!--? Services Ara Start -->
+    <div class="services-area section-padding3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="cl-xl-7 col-lg-8 col-md-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-70">
+                        <span>Our Professional Services</span>
+                        <h2>Best Interior Services</h2>
+                    </div> 
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="our-services">
+        <div class="container">
+            <div class="card">
+              <div class="imgbox">
+                <img src="images/services1.png" alt="Lighting">
+              </div>
+              <div class="content">
+                <h2>Lighting</h2>
+                <p>For each project we establish relationships with partners who we know will help us.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imgbox">
+                <img src="images/services2.png" alt="Interior Design">
+              </div>
+              <div class="content">
+                <h2>Interior Design</h2>
+                <p>For each project we establish relationships with partners who we know will help us.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="imgbox">
+                <img src="images/services3.png" alt="Office Decoration">
+              </div>
+              <div class="content">
+                <h2>Office Decoration</h2>
+                <p>For each project we establish relationships with partners who we know will help us.</p>
+              </div>
+            </div>
+            <div class="card" style="margin-bottom: 50px !important;">
+                <div class="imgbox">
+                  <img src="images/services4.png" alt="Lighting">
+                </div>
+                <div class="content">
+                  <h2>Lighting</h2>
+                  <p>For each project we establish relationships with partners who we know will help us.</p>
+                </div>
+              </div>
+              <div class="card" style="margin-bottom: 50px !important;">
+                <div class="imgbox">
+                  <img src="images/services5.png" alt="Interior Design">
+                </div>
+                <div class="content">
+                  <h2>Interior Design</h2>
+                  <p>For each project we establish relationships with partners who we know will help us.</p>
+                </div>
+              </div>
+              <div class="card" style="margin-bottom: 50px !important;">
+                <div class="imgbox">
+                  <img src="images/services6.png" alt="Office Decoration">
+                </div>
+                <div class="content">
+                  <h2>Office Decoration</h2>
+                  <p>For each project we establish relationships with partners who we know will help us.</p>
+                </div>
+              </div>
+            </div>
+      </div>
+    <!-- Services Ara End -->
+    <!-- brand area start -->
+<div class="brand-area">
+    <div class="container-fluid p-0 fix">
+      <div id="slider_02">
+        <div id="slide-container">
+            <div class="slide_02">
+              <img src="images/brand1.png" alt="">
+            </div>
+            <div class="slide_02">
+              <img src="images/brand2.png" alt="">
+            </div>
+            <div class="slide_02">
+              <img src="images/brand3.png" alt="">
+            </div>
+            <div class="slide_02">
+              <img src="images/brand4.png" alt="">
+            </div>
+            <div class="slide_02">
+              <img src="images/brand5.png" alt="">
+            </div>
+        </div>
+      </div>
+      </div>
+  </div>
+  <!-- brand area end -->
+  <!-- want to work start -->
+<div class="jumbotron">
+    <h1 class="display-4">Want To Work Here!</h1>
+    <p class="lead">Are you Searching For a First-Class Consultant?</p>
+    <hr class="my-4" style="border-color: #fff !important;">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="work-button" href="contact.html" role="button">contact us</a>
+  </div>
+  <!-- want to work end -->
+  <!-- footer start -->
+<div class="services-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <div class="footer-logo">
+            <img src="images/logo2_footer.png"alt="">
+          </div>
+          <p class="first-para">Grabbing the concsumer’s attention <br> isn’t enough you have to keep that <br> attention for at least a.</p>
+          <h3 class="second-para">+564 <strong>7885 3222</strong></h3>
+          <p>syedaashir120@gmail.com</p>
+        </div>
+        <div class="col-md">
+          <h5>USEFUL LINKS</h5>
+          <p class="first-para"><strong>New York</strong></p>
+          <p>123 East 26th Street, Fifth Floor, <br> New York, NY 10011</p>
+          <p class="second-para"><strong>Japan</strong></p>
+          <p>123 East 26th Street, Fifth Floor, <br> New York, NY 10011</p>
+        </div>
+        <div class="col-md">
+         <h5>INSTAGRAM FEED</h5>
+         <div class="first-para">
+           <img src="images/instagram1.png" alt="">
+           <img style="margin-left: 6px;" src="images/instagram2.png" alt="">
+           <img style="margin-left: 6px;" src="images/instagram3.png" alt="">
+         </div>
+         <div class="second-para">
+           <img src="images/instagram4.png" alt="">
+           <img style="margin-left: 6px;" src="images/instagram5.png" alt="">
+           <img style="margin-left: 6px;" src="images/instagram6.png" alt="">
+         </div>
+        </div>
+      </div>
+      <br> <br> <br>
+      <hr class="my-4" style="border-color: lightblue !important;">
+      <div class="row">
+      <div class="col-md-8">
+        <div class="copyright">
+          <p>Copyright ©2020 All rights reserved | This template is made with <i class="fa fa-heart" style="color: red;" aria-hidden="true"></i> by <strong>Syed Aashir</strong>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="footer-fa-right">
+        <p><span>Follow Us</span> 
+              <a href="#" class="social-icon" target="_blank">
+                <i class="fa fa-youtube"></i>
+              </a>
+             <a href="#" class="social-icon" target="_blank">
+               <i class="fa fa-facebook"></i>
+             </a>
+             <a href="#" class="social-icon" target="_blank">
+               <i class="fa fa-linkedin"></i>
+             </a>
+             <a href="#" class="social-icon" target="_blank">
+               <i class="fa fa-instagram"></i>
+             </a>
+        </p>
+      </div>
+      </div>
+      </div>
+    </div>
+    </div>
+    <!-- footer end -->
+</body>
+</html>
